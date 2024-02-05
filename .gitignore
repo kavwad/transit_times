@@ -1,0 +1,4 @@
+config.ini
+config.py
+test.db
+__pycache__/
