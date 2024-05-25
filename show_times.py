@@ -106,10 +106,11 @@ def trigger_6_7(arrivals_nearby, trigger):
         print('No 6/7 on the horizon.')
 
     elif trigger in arrivals_nearby['6/7']['←']:
-        url = 'https://maker.ifttt.com/trigger/bus_soon/with/key/' + KEY_IFTT
-        # Send web request to IFTT webhook address
+        # url = 'https://maker.ifttt.com/trigger/bus_soon/with/key/' + KEY_IFTT
+        url = 'https://hook.us1.make.com/55yhpa43fsgznvkc5838mhqyl7ycjte2'
+        # Send web request to Make webhook address
         response = requests.post(url)
-        print(f'6/7 in {trigger} minutes! Sent IFTTT webhook.' if response.status_code == 200
+        print(f'6/7 in {trigger} minutes! Sent Make webhook.' if response.status_code == 200
               else 'Failed to trigger the webhook.')
 
     else:
