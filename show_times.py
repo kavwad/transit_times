@@ -7,12 +7,8 @@ Display bus times for my nearby bus stops
 import argparse
 import configparser
 import time
-import sys
-
-sys.path.append("../DFRobot_RPi_Eink_Display")
-
 import requests
-import dfr_write
+from DFRobot_RPi_Eink_Display import dfr_write
 
 import get_times
 from config import ARROWS
