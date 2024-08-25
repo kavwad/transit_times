@@ -11,7 +11,7 @@ def initialize_display():
         print(f"Error initializing display: {e}")
         return None
 
-def write(lines):
+def dfr_write(lines):
     eink_display = initialize_display()
     if not eink_display:
         print("Failed to initialize display. Cannot write.")
