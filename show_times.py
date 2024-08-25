@@ -8,15 +8,19 @@ import argparse
 import configparser
 import time
 import requests
-from DFRobot_RPi_Eink_Display import dfr_write
+import platform
 
 import get_times
 from config import ARROWS
+
+if platform.system() != 'Darwin':
+    from DFRobot_RPi_Eink_Display import dfr_write
 
 config = configparser.ConfigParser()
 config.read('config.ini')
 
 KEY_IFTT = config['KEYS']['KEY_IFTT']
+
 
 def get_arrows(arrivals_nearby):
     """
