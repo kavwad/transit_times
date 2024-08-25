@@ -4,6 +4,9 @@ package-mode = false
 [tool.poetry.dependencies]
 python = "^3.11"
 requests = "^2.32.3"
+spidev = "^3.6"
+freetype-py = "^2.4.0"
+rpi-gpio = "^0.7.1"
 
 
 [build-system]
