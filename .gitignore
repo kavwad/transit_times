@@ -3,3 +3,4 @@ config.py
 test.db
 __pycache__/
 .DS_Store
+DFRobot_RPi_Eink_Display/examples
