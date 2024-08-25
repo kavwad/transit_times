@@ -117,5 +117,5 @@ def parse_times(all_data):
 
 
 if __name__ == "__main__":
-    print('Please run display_times.py instead')
+    print('Please run show_times.py instead')
     # export_shelf()
