@@ -146,7 +146,7 @@ def main():
         to_print = print_times(arrivals_nearby)
         # for line in to_print: #debug
         #     print(line)
-        dfr_write.write(to_print)
+        dfr_write(to_print)
 
     if args.trig:
         trigger, loops = args.trig
