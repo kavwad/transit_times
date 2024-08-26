@@ -23,13 +23,16 @@ def dfr_write(lines):
     ft = FreetypeHelper(fontFilePath)
     ft.set_dis_lower_limit(48)
     eink_display.set_ex_fonts(ft)
-    eink_display.set_text_format(1, eink_display.BLACK, eink_display.WHITE, 1, 1)
     eink_display.set_ex_fonts_fmt(13, 13)
+    eink_display.set_text_format(1, eink_display.BLACK, eink_display.WHITE, 1, 1)
 
-    for line in lines:
-        eink_display.flush(eink_display.PART)
+    eink_display.flush(eink_display.PART)  # Partial update after drawing rectangles
+
+    for i, line in enumerate(lines):
+        current_y = eink_display._text_cursor_y
         eink_display.print_str_ln(line)
-        print(line)
+        print(f"Line {i+1} positioned at y={current_y}")
+        eink_display.flush(eink_display.PART)  # Partial update after each line
+        print(f"Printed and flushed: {line}")
 
-    # Cleanup
     del eink_display
