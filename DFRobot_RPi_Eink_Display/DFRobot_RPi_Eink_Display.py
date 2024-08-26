@@ -1354,7 +1354,7 @@ class DFRobot_Display():
 class DFRobot_RPi_Eink_Display(DFRobot_Display):
     XDOT = 128
     YDOT = 250
-    HEIGHT = 122
+    HEIGHT = 128
     WIDTH = 250
     GDEH0213B7_SERIES = 3
     GDEH0213B1 = 2
